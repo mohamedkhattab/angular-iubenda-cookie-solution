@@ -1,0 +1,10 @@
+<a routerLink="/">Go Home</a>
+<h3>Youtube Player Prior Blocking Example</h3>
+
+<div *ngIf="preference && preference.consent">
+  <youtube-player
+      [videoId]="id"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+    ></youtube-player>
+</div>
